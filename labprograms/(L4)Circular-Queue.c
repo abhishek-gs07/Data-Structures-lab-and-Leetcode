@@ -5,7 +5,8 @@ int circularq[MAX], front=-1,rear=-1;
 
 void Insert(int ele){
         if(front ==(rear+1)%MAX){
-            printf("Queue Overflow\n");}
+            printf("Queue Overflow\n");
+            return;}
         if(front==-1){
             front=0;
         }
@@ -15,7 +16,8 @@ void Insert(int ele){
 
 void Delete(){
     if(front==-1 && rear==-1){
-       printf("Queue Underflow\n");}
+       printf("Queue Underflow\n");
+       return;}
     else{
         printf("Deleted element is: %d ",circularq[front]);
         if(front==rear){
