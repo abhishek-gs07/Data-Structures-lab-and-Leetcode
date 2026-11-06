@@ -6,7 +6,7 @@ struct Node {
     struct Node *next;
 };
 
-void deleteEnd(struct Node **head, int value){
+void deleteEnd(struct Node **head){
     struct Node *prev, *temp;
     if(*head==NULL){
         printf("List is empty \n");
@@ -133,7 +133,7 @@ int main() {
                     scanf("%d",&value);
                     deleteMiddle(&head, value);
                     break;
-            case 4: deleteEnd(&head, value);
+            case 4: deleteEnd(&head);
                     break;
             case 5: display(head);
                     break;
