@@ -72,6 +72,7 @@ void deleteMiddle(struct Node **head, int value) {
     temp = *head;
     if(temp->data==value){
         *head=NULL;
+        printf("Deleted element is: %d",temp->data);
         free(temp);
         return;
     }
